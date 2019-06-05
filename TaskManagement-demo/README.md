@@ -45,9 +45,9 @@ c.d.d.services.NotificationServices      : Succesfully send notification to Mari
 ```
 
 
-* **Reloading Rules**:
+* **HOT Reloading Rules**:
 
-For example in teamRules.drl adjust the **date-effective** and **date-expire** values to force rule execution
+Open other terminal and **don't stop the droolsRunner process**. Now, in teamRules.drl adjust the **date-effective** and **date-expire** values to force rule execution
 
 ```
 rule "Jira_433 2 of June amazing message"
