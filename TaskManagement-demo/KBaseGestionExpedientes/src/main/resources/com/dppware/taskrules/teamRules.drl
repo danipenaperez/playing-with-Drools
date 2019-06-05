@@ -21,8 +21,8 @@ end
 * JIRA-433  "Requeriment 433 2 of June add 25th Anniversary message"
 **/
 rule "Jira_433 2 of June amazing message"
-	date-effective "2019/06/05"
-	date-expires "2019/06/06"
+	date-effective "2019/06/01"
+	date-expires "2019/06/02"
 	when
      	$t : Task()
     then
