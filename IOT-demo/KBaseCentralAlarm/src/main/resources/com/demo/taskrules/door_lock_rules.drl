@@ -1,0 +1,49 @@
+package com.demo.taskrules;
+
+import com.dppware.rulesKJarArtifact.bean.*;
+import com.dppware.rulesKJarArtifact.bean.device.*;
+
+import java.util.Date;
+
+dialect  "mvel"
+
+/**
+* If entrance Door open, the entrance ligth is switch on
+**/
+rule " If entrance Door open, the entrance ligth is switch on"
+	when
+     	$dl : DoorLock(id == "EntranceLock" && status == "open")
+     	$ligth: Light()
+    then
+    	$ligth.on()
+end
+
+/**
+* If entrance Door closed, the entrance ligth is switch off
+**/
+rule "If entrance Door closed, the entrance ligth is switch off"
+	when
+     	$dl : DoorLock(id == "EntranceLock" && status == "closed")
+     	$ligth: Light()
+    then
+    	$ligth.off()
+end
+
+
+/**
+* If the backDoor is open fire the alarm
+**/
+rule "If the backDoor is open fire the alarm"
+	when
+     	$dl : DoorLock(id == "BackDoorEntrance"  && status == "open")
+     	$ca : CentralAlarm(status == "ready")
+    then
+		System.out.println("The Back Door is open");
+		
+		modify($ca){
+			status = "fired";
+		};    	
+end
+
+
+

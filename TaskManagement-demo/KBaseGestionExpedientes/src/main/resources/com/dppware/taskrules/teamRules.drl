@@ -1,0 +1,31 @@
+package com.dppware.taskrules;
+
+import com.dppware.rulesKJarArtifact.bean.*;
+
+dialect  "mvel"
+
+
+/**
+* JIRA-240  "Requeriment 4 The assigned Employee receive a notification"
+**/
+rule "Jira_240 The assigned Employee receive a notification"
+	when
+     	$t : Task(assignedTo != null)
+    then
+    	notificationService.sendNotification($t.assignedTo, formatText($t.title));
+end
+
+
+
+/**
+* JIRA-433  "Requeriment 433 2 of June add 25th Anniversary message"
+**/
+rule "Jira_433 2 of June amazing message"
+	date-effective "2019/06/05"
+	date-expires "2019/06/06"
+	when
+     	$t : Task()
+    then
+    	$t.setDescription($t.getDescription()+" .This Task has been created in our Company 25th Anniversary");
+    	modify($t)
+end

@@ -1,0 +1,22 @@
+package com.demo.taskrules;
+
+
+import com.dppware.rulesKJarArtifact.bean.CentralAlarm;
+import com.dppware.rulesKJarArtifact.bean.device.Siren;
+
+dialect  "mvel"
+
+/**
+* while the alarm is fired, emmit a sound
+**/
+rule "Siren_2"
+	timer ( int: 2s 2s )
+	when
+     	$alarm : CentralAlarm(status == "fired")
+     	$siren: Siren()
+    then
+   		$siren.trigger();
+end
+
+
+

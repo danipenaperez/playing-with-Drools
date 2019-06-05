@@ -1,0 +1,46 @@
+package com.dppware.taskrules;
+
+import com.dppware.rulesKJarArtifact.bean.*;
+
+import java.util.Date;
+
+dialect  "mvel"
+
+/**
+* JIRA-167  "Reuqeriment 1 - si viene vacio se le pone el estado inicial abierto"
+**/
+rule "Jira_167 Default Status if not exists"
+	when
+     	$t : Task(status == null)
+    then
+    	modify($t){
+   			setStatus("open");
+   		}
+   		
+end
+
+
+/**
+* JIRA-168  "Se le genera una fecha de creacion al expediente"
+**/
+rule "Jira_168 Default createdDate if not exists"
+	when
+     	$t : Task(CreatedOn == null)
+    then
+    	modify($t){
+   			setCreatedOn(new Date());
+   		}
+end
+
+
+/**
+* JIRA-227  "Requeriment 3 - si no esta asignado, se le asigna a un usuario responsable"
+**/
+rule "Jira_227 Default Employee Assignation"
+	when
+     	$t : Task(assignedTo == null)
+    then
+    	modify($t){
+   			setAssignedTo(employeeProvider.getEmployeeByRole("officer"));
+   		}
+end

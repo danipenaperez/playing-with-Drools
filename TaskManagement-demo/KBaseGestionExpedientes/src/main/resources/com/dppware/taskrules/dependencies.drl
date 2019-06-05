@@ -1,0 +1,13 @@
+package com.dppware.taskrules;
+
+import com.dppware.rulesKJarArtifact.bean.*;
+
+global com.dppware.rulesKJarArtifact.provider.IEmployeeProvider employeeProvider;
+global com.dppware.rulesKJarArtifact.provider.INotificationServices notificationService;
+
+
+//functions inline definition
+function String formatText(String text) {
+	return text.toUpperCase();
+}
+

@@ -1,0 +1,137 @@
+<object-stream>
+<org.drools.core.audit.WorkingMemoryLog>
+  <version>6.1</version>
+  <events>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>1</type>
+      <factId>1</factId>
+      <objectToString>Task [title=First Important Task, description=Do a important task at the office, createdOn=null, status=null, assignedTo=null]</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Jira_167 Default Status if not exists [1]</activationId>
+      <rule>Jira_167 Default Status if not exists</rule>
+      <declarations>$t=Task [title=First Important Task, description=Do a important task at the office, createdOn=null, status=null, assignedTo=null]</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Jira_167 Default Status if not exists [1]</activationId>
+      <rule>Jira_167 Default Status if not exists</rule>
+      <declarations>$t=Task [title=First Important Task, description=Do a important task at the office, createdOn=null, status=null, assignedTo=null]</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>1</factId>
+      <objectToString>Task [title=First Important Task, description=Do a important task at the office, createdOn=null, status=open, assignedTo=null]</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Jira_167 Default Status if not exists [1]</activationId>
+      <rule>Jira_167 Default Status if not exists</rule>
+      <declarations>$t=Task [title=First Important Task, description=Do a important task at the office, createdOn=null, status=open, assignedTo=null]</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Jira_168 Default createdDate if not exists [1]</activationId>
+      <rule>Jira_168 Default createdDate if not exists</rule>
+      <declarations>$t=Task [title=First Important Task, description=Do a important task at the office, createdOn=null, status=open, assignedTo=null]</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Jira_168 Default createdDate if not exists [1]</activationId>
+      <rule>Jira_168 Default createdDate if not exists</rule>
+      <declarations>$t=Task [title=First Important Task, description=Do a important task at the office, createdOn=null, status=open, assignedTo=null]</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>1</factId>
+      <objectToString>Task [title=First Important Task, description=Do a important task at the office, createdOn=Wed Jun 05 08:09:52 CEST 2019, status=open, assignedTo=null]</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Jira_168 Default createdDate if not exists [1]</activationId>
+      <rule>Jira_168 Default createdDate if not exists</rule>
+      <declarations>$t=Task [title=First Important Task, description=Do a important task at the office, createdOn=Wed Jun 05 08:09:52 CEST 2019, status=open, assignedTo=null]</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Jira_227 Default Employee Assignation [1]</activationId>
+      <rule>Jira_227 Default Employee Assignation</rule>
+      <declarations>$t=Task [title=First Important Task, description=Do a important task at the office, createdOn=Wed Jun 05 08:09:52 CEST 2019, status=open, assignedTo=null]</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Jira_227 Default Employee Assignation [1]</activationId>
+      <rule>Jira_227 Default Employee Assignation</rule>
+      <declarations>$t=Task [title=First Important Task, description=Do a important task at the office, createdOn=Wed Jun 05 08:09:52 CEST 2019, status=open, assignedTo=null]</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>1</factId>
+      <objectToString>Task [title=First Important Task, description=Do a important task at the office, createdOn=Wed Jun 05 08:09:52 CEST 2019, status=open, assignedTo=Employee [name=Marisa, role=officer]]</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Jira_227 Default Employee Assignation [1]</activationId>
+      <rule>Jira_227 Default Employee Assignation</rule>
+      <declarations>$t=Task [title=First Important Task, description=Do a important task at the office, createdOn=Wed Jun 05 08:09:52 CEST 2019, status=open, assignedTo=Employee [name=Marisa, role=officer]]</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Jira_240 The assigned Employee receive a notification [1]</activationId>
+      <rule>Jira_240 The assigned Employee receive a notification</rule>
+      <declarations>$t=Task [title=First Important Task, description=Do a important task at the office, createdOn=Wed Jun 05 08:09:52 CEST 2019, status=open, assignedTo=Employee [name=Marisa, role=officer]]</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Jira_240 The assigned Employee receive a notification [1]</activationId>
+      <rule>Jira_240 The assigned Employee receive a notification</rule>
+      <declarations>$t=Task [title=First Important Task, description=Do a important task at the office, createdOn=Wed Jun 05 08:09:52 CEST 2019, status=open, assignedTo=Employee [name=Marisa, role=officer]]</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Jira_240 The assigned Employee receive a notification [1]</activationId>
+      <rule>Jira_240 The assigned Employee receive a notification</rule>
+      <declarations>$t=Task [title=First Important Task, description=Do a important task at the office, createdOn=Wed Jun 05 08:09:52 CEST 2019, status=open, assignedTo=Employee [name=Marisa, role=officer]]</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Jira_433 2 of June amazing message [1]</activationId>
+      <rule>Jira_433 2 of June amazing message</rule>
+      <declarations>$t=Task [title=First Important Task, description=Do a important task at the office, createdOn=Wed Jun 05 08:09:52 CEST 2019, status=open, assignedTo=Employee [name=Marisa, role=officer]]</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Jira_433 2 of June amazing message [1]</activationId>
+      <rule>Jira_433 2 of June amazing message</rule>
+      <declarations>$t=Task [title=First Important Task, description=Do a important task at the office, createdOn=Wed Jun 05 08:09:52 CEST 2019, status=open, assignedTo=Employee [name=Marisa, role=officer]]</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>1</factId>
+      <objectToString>Task [title=First Important Task, description=Do a important task at the office .This Task has been created in our Company 25th Anniversary, createdOn=Wed Jun 05 08:09:52 CEST 2019, status=open, assignedTo=Employee [name=Marisa, role=officer]]</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Jira_433 2 of June amazing message [1]</activationId>
+      <rule>Jira_433 2 of June amazing message</rule>
+      <declarations>$t=Task [title=First Important Task, description=Do a important task at the office .This Task has been created in our Company 25th Anniversary, createdOn=Wed Jun 05 08:09:52 CEST 2019, status=open, assignedTo=Employee [name=Marisa, role=officer]]</declarations>
+      <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+  </events>
+</org.drools.core.audit.WorkingMemoryLog>
+</object-stream>

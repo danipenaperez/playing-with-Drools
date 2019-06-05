@@ -1,0 +1,24 @@
+package com.taskRules;
+
+import com.dppware.droolsRunner.facts.*;
+
+import java.util.Date;
+
+dialect  "mvel"
+
+/**
+* Assign the correct user to perform the task
+**/
+rule "Assign employee to task"
+	when
+     	$t : Task(assignedTo.role == "Policeman")
+     	$e : findEmployeeByRole("Policeman");
+    then
+    	System.out.println("Evento para policias "+ $t);
+    	
+end
+
+
+query findEmployeeByRole
+      employee : Employee( role=="Policeman" )
+end

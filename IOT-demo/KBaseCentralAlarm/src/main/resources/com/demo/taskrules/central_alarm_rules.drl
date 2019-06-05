@@ -1,0 +1,20 @@
+package com.demo.taskrules;
+
+import com.dppware.rulesKJarArtifact.bean.*;
+import com.dppware.rulesKJarArtifact.bean.device.*;
+
+dialect  "mvel"
+
+/**
+* Always exec when a central alarm is added to the environment
+**/
+rule "Alarm is Ready"
+	when
+     	$ca : CentralAlarm(status == "ready")
+    then
+	    System.out.println("Central Alarm is Ready");
+end
+
+
+
+

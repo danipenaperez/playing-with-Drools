@@ -1,0 +1,58 @@
+package com.demo.taskrules;
+
+import com.dppware.rulesKJarArtifact.bean.*;
+import com.dppware.rulesKJarArtifact.bean.device.*;
+
+dialect  "mvel"
+
+/**
+* Always exec when a central alarm is added to the environment
+**/
+rule "Added Central Alarm to The System"
+	when
+     	$ca : CentralAlarm(status == null)
+    then
+	    modify($ca){
+			  	setStatus("ready");
+		}
+    	System.out.println("Sucessfully added central alarm to monitoring rules engine");
+	    
+end
+
+
+/**
+* Always exec when a DoorLock  is added  added to the environment
+**/
+rule "Added Door Lock to the System Alarm"
+	when
+     	$dl : DoorLock(status == null)
+    then
+    	
+		$dl.close();//ensure the door lock start state is closed
+		System.out.println("Sucessfully added Locked " + $dl.id + "to the system");
+end
+
+/**
+* Always exec when a Light  is added  added to the environment
+**/
+rule "Added Light to the System Alarm"
+	when
+     	$dl : Light(status == null)
+    then
+    	
+		$dl.off();
+		System.out.println("Sucessfully added Locked " + $dl.id + "to the system");
+end
+
+/**
+* Always exec when a Siren  is added  added to the environment
+**/
+rule "Added Siren to the System Alarm"
+	when
+     	$sir : Siren()
+    then
+    	System.out.println("Sucessfully added Locked " + $sir.id + "to the system");
+end
+
+
+
