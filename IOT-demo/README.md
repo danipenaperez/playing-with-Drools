@@ -8,12 +8,12 @@ This demo simulate a IOT house project with some devices and some rules to manag
 
 1.Generate the KJar artifact that contains the KnoledgeBase (Will generate the KJar Artifact (KBaseCentralAlarm-1.0.0.jar) at .m2):
 ```
-/playing-with-Drools/KBaseCentralAlarm (IOT-demo) $ mvn clean install
+./KBaseCentralAlarm (IOT-demo) $ mvn clean install
 ```
 
 2.Start up the Drools Runner web app (wait until "Started DroolsDemoApplication"): 
 ```
-/playing-with-Drools/droolsCentralAlarmRunnerNode (IOT-demo) $ mvn spring-boot:run
+./droolsCentralAlarmRunnerNode (IOT-demo) $ mvn spring-boot:run
 ```
 
 
@@ -189,7 +189,7 @@ Restore to normal State
 ```
 curl -X POST -H 'Content-Type: application/json' -i http://localhost:8080/events --data '{"id":"BackDoorEntrance","status":"closed"}'
 ```
-2.Reset the Alarm
+2.Reset the Alarm (**notice that if you reset the alarm without close the BackDoor the Alarm will be fired again because the Backdoor rule is satisfied**)
 ```
 curl -X POST -i http://localhost:8080/alarm/reset
 ```

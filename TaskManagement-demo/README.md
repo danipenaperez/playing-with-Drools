@@ -7,12 +7,12 @@ This demo show how to deploy new rule version without stop the engine.
 
 1.Generate the KJar artifact that contains the KnoledgeBase (Will generate the KJar Artifact (KBaseGestionExpedientes-1.0.0.jar) at .m2):
 ```
-/playing-with-Drools/KBaseGestionExpedientes (TaskManagement-demo) $ mvn clean install
+./KBaseGestionExpedientes (TaskManagement-demo) $ mvn clean install
 ```
 
 2.Start up the Drools Runner web app (wait until "Started DroolsDemoApplication"): 
 ```
-/playing-with-Drools/droolsRunnerNode (TaskManagement-demo) $ mvn spring-boot:run
+./droolsRunnerNode (TaskManagement-demo) $ mvn spring-boot:run
 ```
 
 
