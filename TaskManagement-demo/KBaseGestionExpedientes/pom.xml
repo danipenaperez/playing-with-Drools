@@ -16,7 +16,7 @@
     <generateDMNModel>YES</generateDMNModel>
   </properties>
 
-  <version>1.0.1</version>
+  <version>1.0.0</version>
   <groupId>com.dppware</groupId>
   <artifactId>KBaseGestionExpedientes</artifactId>
 
